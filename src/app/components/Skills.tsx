@@ -1,25 +1,25 @@
-import { Code, Palette, Lightbulb, Briefcase } from 'lucide-react';
+import { Code, Shield, Database, Terminal } from 'lucide-react';
 
 const skillCategories = [
+  {
+    icon: Shield,
+    title: 'Cybersecurity Awareness',
+    skills: ['Network Security Basics', 'Phishing & Malware Awareness', 'Social Engineering', 'Safe Browsing', 'Cryptography Basics', 'System & Password Security', 'Ethical Hacking Basics', 'Secure Coding']
+  },
   {
     icon: Code,
     title: 'Front-End Development',
     skills: ['HTML', 'CSS', 'JavaScript', 'React', 'TypeScript', 'Tailwind CSS']
   },
   {
-    icon: Palette,
-    title: 'Embedded Systems',
-    skills: ['Microcontrollers', 'C/C++', 'Arduino', 'Hardware Integration', 'Sensor Integration', 'IoT']
+    icon: Terminal,
+    title: 'Programming Languages',
+    skills: ['Java', 'C++', 'C#', 'Python', 'PHP', 'Embedded C']
   },
   {
-    icon: Lightbulb,
-    title: 'CNC & Automation',
-    skills: ['CNC Programming', 'Manufacturing Systems', 'Automation Concepts', 'Control Systems', 'CAD/CAM', 'G-Code']
-  },
-  {
-    icon: Briefcase,
-    title: 'Professional',
-    skills: ['Technical Instruction', 'Programming Fundamentals', 'Problem Solving', 'Team Collaboration', 'Project Management', 'Documentation']
+    icon: Database,
+    title: 'Databases & Systems',
+    skills: ['Basic SQL', 'Microcontrollers', 'Arduino', 'IoT', 'Sensor Integration']
   }
 ];
 
@@ -30,7 +30,7 @@ export function Skills() {
         <h2 className="text-4xl md:text-5xl mb-12 text-center text-gray-900">
           Skills & Expertise
         </h2>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {skillCategories.map((category, index) => (
             <div
@@ -40,11 +40,11 @@ export function Skills() {
               <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                 <category.icon className="w-6 h-6 text-white" />
               </div>
-              
+
               <h3 className="text-xl mb-4 text-gray-900">
                 {category.title}
               </h3>
-              
+
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, skillIndex) => (
                   <span

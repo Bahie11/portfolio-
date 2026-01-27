@@ -1,4 +1,4 @@
-const profileImage = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=800&h=800';
+import profileImage from '../../assets/profile.png';
 
 export function About() {
   return (

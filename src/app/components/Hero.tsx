@@ -1,6 +1,6 @@
 import { Github, Linkedin, Mail } from 'lucide-react';
-import { useState } from 'react';
-const profileImage = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=200&h=200';
+
+import profileImage from '../../assets/profile.png';
 
 export function Hero() {
   return (
