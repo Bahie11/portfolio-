@@ -1,4 +1,4 @@
-import { Menu } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 export function Header() {
@@ -13,54 +13,51 @@ export function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0f]/80 backdrop-blur-md border-b border-cyan-500/20">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <span className="text-2xl font-bold text-gray-900">Portfolio</span>
+            <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent tracking-wide">
+              Mahmoud Elbahie
+            </span>
           </div>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-gray-900 transition-colors">
-              About
-            </button>
-            <button onClick={() => scrollToSection('work')} className="text-gray-700 hover:text-gray-900 transition-colors">
-              Work
-            </button>
-            <button onClick={() => scrollToSection('skills')} className="text-gray-700 hover:text-gray-900 transition-colors">
-              Skills
-            </button>
-            <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-gray-900 transition-colors">
-              Contact
-            </button>
+            {['about', 'work', 'skills', 'contact'].map((section) => (
+              <button
+                key={section}
+                onClick={() => scrollToSection(section)}
+                className="text-gray-400 hover:text-cyan-400 transition-colors capitalize text-sm tracking-wider relative group"
+              >
+                {section}
+                <span className="absolute -bottom-1 left-0 w-0 h-px bg-cyan-400 transition-all group-hover:w-full" />
+              </button>
+            ))}
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-gray-700"
+            className="md:hidden p-2 text-gray-400 hover:text-cyan-400 transition-colors"
           >
-            <Menu className="w-6 h-6" />
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
+          <div className="md:hidden py-4 border-t border-cyan-500/20">
             <div className="flex flex-col gap-4">
-              <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-gray-900 text-left">
-                About
-              </button>
-              <button onClick={() => scrollToSection('work')} className="text-gray-700 hover:text-gray-900 text-left">
-                Work
-              </button>
-              <button onClick={() => scrollToSection('skills')} className="text-gray-700 hover:text-gray-900 text-left">
-                Skills
-              </button>
-              <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-gray-900 text-left">
-                Contact
-              </button>
+              {['about', 'work', 'skills', 'contact'].map((section) => (
+                <button
+                  key={section}
+                  onClick={() => scrollToSection(section)}
+                  className="text-gray-400 hover:text-cyan-400 transition-colors capitalize text-left text-sm tracking-wider"
+                >
+                  {section}
+                </button>
+              ))}
             </div>
           </div>
         )}

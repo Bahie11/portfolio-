@@ -1,6 +1,14 @@
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import elevatorMdpImage from '../../assets/elevator_mdp.png';
+
+const tagColors = [
+  'bg-cyan-500/10 text-cyan-400 border-cyan-500/20',
+  'bg-purple-500/10 text-purple-400 border-purple-500/20',
+  'bg-pink-500/10 text-pink-400 border-pink-500/20',
+  'bg-green-500/10 text-green-400 border-green-500/20',
+  'bg-orange-500/10 text-orange-400 border-orange-500/20',
+];
 
 const projects = [
   {
@@ -63,51 +71,49 @@ const projects = [
 
 export function Work() {
   return (
-    <section id="work" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl mb-12 text-center text-gray-900">
-          Featured Work
+    <section id="work" className="py-20 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #0d1117 0%, #0a0a0f 100%)' }}>
+
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-500/5 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-4xl md:text-5xl mb-4 text-center font-bold text-white">
+          Featured <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Work</span>
         </h2>
+        <p className="text-center text-cyan-400/60 mb-12 tracking-widest text-sm uppercase">Projects & Builds</p>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project) => (
+          {projects.map((project, i) => (
             <div
               key={project.id}
-              className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2"
+              className="group rounded-2xl overflow-hidden border border-white/5 bg-white/[0.03] hover:border-cyan-500/30 hover:bg-white/[0.05] transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan-500/10"
             >
               <a
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative h-64 overflow-hidden block"
+                className="relative h-56 overflow-hidden block"
               >
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-transparent to-transparent z-10" />
                 <ImageWithFallback
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-70 group-hover:opacity-90"
                 />
               </a>
 
               <div className="p-6">
-                <h3 className="text-2xl mb-3 text-gray-900">
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-blue-600 transition-colors"
-                  >
-                    {project.title}
-                  </a>
+                <h3 className="text-xl mb-2 text-white font-semibold group-hover:text-cyan-300 transition-colors">
+                  {project.title}
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-400 mb-4 text-sm leading-relaxed">
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag, index) => (
+                <div className="flex flex-wrap gap-2 mb-5">
+                  {project.tags.map((tag, idx) => (
                     <span
-                      key={index}
-                      className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
+                      key={idx}
+                      className={`px-3 py-1 rounded-full text-xs border font-medium ${tagColors[(idx + i) % tagColors.length]}`}
                     >
                       {tag}
                     </span>
@@ -118,10 +124,11 @@ export function Work() {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors"
+                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium"
                 >
-                  View Project
-                  <ExternalLink className="w-4 h-4" />
+                  <Github className="w-4 h-4" />
+                  View on GitHub
+                  <ExternalLink className="w-3 h-3" />
                 </a>
               </div>
             </div>
