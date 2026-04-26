@@ -1,41 +1,41 @@
-import { Code, Shield, Database, Terminal, Globe, Lock } from 'lucide-react';
+import { Brain, Code, Database, BarChart3, Zap, Users } from 'lucide-react';
 
 const skillCategories = [
   {
-    icon: Shield,
-    title: 'Penetration Testing',
+    icon: Brain,
+    title: 'Machine Learning & AI',
     color: 'from-cyan-500 to-blue-600',
     glow: 'shadow-cyan-500/20',
     border: 'border-cyan-500/20',
     tagColor: 'bg-cyan-500/10 text-cyan-300 border-cyan-500/20',
-    skills: ['Network Pen Testing', 'Web App Testing', 'Privilege Escalation', 'Vulnerability Assessment', 'Security Reporting', 'Ethical Hacking']
+    skills: ['Supervised Learning', 'Unsupervised Learning', 'Model Training & Evaluation', 'Deep Learning', 'Neural Networks', 'TensorFlow']
   },
   {
-    icon: Globe,
-    title: 'Networking & Security',
+    icon: Code,
+    title: 'Programming Languages',
     color: 'from-purple-500 to-pink-600',
     glow: 'shadow-purple-500/20',
     border: 'border-purple-500/20',
     tagColor: 'bg-purple-500/10 text-purple-300 border-purple-500/20',
-    skills: ['CCNA', 'Routing & Switching', 'Network Security', 'OWASP Top 10', 'Cryptography', 'Firewalls & IDS']
+    skills: ['Python', 'Java', 'C++', 'C#', 'PHP', 'Embedded C', 'JavaScript']
   },
   {
-    icon: Terminal,
-    title: 'Programming Languages',
+    icon: BarChart3,
+    title: 'Data Analysis & Visualization',
     color: 'from-green-500 to-teal-600',
     glow: 'shadow-green-500/20',
     border: 'border-green-500/20',
     tagColor: 'bg-green-500/10 text-green-300 border-green-500/20',
-    skills: ['Python', 'C++', 'Java', 'Bash / Shell', 'PHP', 'JavaScript']
+    skills: ['Data Preprocessing', 'Data Cleaning', 'NumPy & Pandas', 'Matplotlib', 'Data Visualization', 'Statistical Analysis']
   },
   {
-    icon: Lock,
-    title: 'Security Tools',
+    icon: Zap,
+    title: 'Natural Language Processing',
     color: 'from-orange-500 to-red-600',
     glow: 'shadow-orange-500/20',
     border: 'border-orange-500/20',
     tagColor: 'bg-orange-500/10 text-orange-300 border-orange-500/20',
-    skills: ['Nmap', 'Metasploit', 'Burp Suite', 'Wireshark', 'Kali Linux', 'SQLMap']
+    skills: ['Text Processing', 'NLP Fundamentals', 'Text Analysis', 'Language Models', 'Model Optimization', 'AI Ethics']
   },
   {
     icon: Code,
@@ -44,16 +44,16 @@ const skillCategories = [
     glow: 'shadow-pink-500/20',
     border: 'border-pink-500/20',
     tagColor: 'bg-pink-500/10 text-pink-300 border-pink-500/20',
-    skills: ['HTML5', 'CSS3', 'React', 'TypeScript', 'Tailwind CSS', 'REST APIs']
+    skills: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Tailwind CSS', 'REST APIs']
   },
   {
-    icon: Database,
-    title: 'Systems & Databases',
+    icon: Users,
+    title: 'Leadership & Soft Skills',
     color: 'from-yellow-500 to-orange-600',
     glow: 'shadow-yellow-500/20',
     border: 'border-yellow-500/20',
     tagColor: 'bg-yellow-500/10 text-yellow-300 border-yellow-500/20',
-    skills: ['SQL', 'Linux', 'Windows Server', 'Microcontrollers', 'IoT', 'Arduino']
+    skills: ['Team Leadership', 'Communication', 'Problem-Solving', 'Time Management', 'Public Speaking', 'Project Management']
   },
 ];
 

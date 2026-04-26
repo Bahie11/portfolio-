@@ -17,16 +17,16 @@ export function About() {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="order-2 md:order-1 space-y-5">
             <p className="text-gray-300 leading-relaxed">
-              I am a passionate and detail-oriented <span className="text-cyan-400 font-medium">Penetration Tester</span> with a strong foundation in networking, cybersecurity principles, and ethical hacking methodologies. My goal is to help organizations identify vulnerabilities before attackers do, strengthen their security posture, and build resilient systems against modern cyber threats.
+              I am an <span className="text-cyan-400 font-medium">Artificial Intelligence student</span> at the Egyptian Japanese University for Science and Technology with a strong passion for developing intelligent systems. My focus is on machine learning, data analysis, and AI fundamentals, combined with solid problem-solving abilities and a commitment to building robust and ethical AI solutions.
             </p>
             <p className="text-gray-400 leading-relaxed">
-              I have successfully completed the <span className="text-purple-400 font-medium">Cisco Certified Network Associate (CCNA)</span> coursework, gaining solid knowledge in networking fundamentals, routing and switching, network security, IP services, and troubleshooting.
+              Currently in my third year studying <span className="text-purple-400 font-medium">Computer Networks and Cyber Security</span> at the Faculty of Computer Science and Information Technology, I maintain a strong academic record with predicted First Class Honours. My education has given me a comprehensive foundation in both theoretical AI concepts and practical software engineering.
             </p>
             <p className="text-gray-400 leading-relaxed">
-              In addition, I completed professional penetration testing training at <span className="text-pink-400 font-medium">DEPI (Digital Egypt Pioneers Initiative)</span>, gaining hands-on experience in vulnerability assessment, web application testing, network penetration testing, privilege escalation, and security reporting.
+              Beyond academics, I have demonstrated <span className="text-pink-400 font-medium">leadership and impact through volunteering</span>, serving as PR and Fundraising Head at INGENIUM E-JUST and IEEE E-JUST. I have successfully organized major events, managed teams of 16+ members, increased member retention by 78%, and secured significant sponsorships for chapter initiatives.
             </p>
             <p className="text-gray-400 leading-relaxed">
-              I am continuously learning and staying updated with emerging threats, security tools, and best practices. I am driven by curiosity, persistence, and a commitment to ethical standards in cybersecurity.
+              I am driven by curiosity, excellent communication skills, and adaptability. I aspire to pursue a career in artificial intelligence, machine learning, and software engineering, with a commitment to developing ethical and responsible AI systems.
             </p>
           </div>
 
@@ -41,24 +41,24 @@ export function About() {
               />
             </div>
 
-            {/* Certifications */}
+            {/* Expertise Areas */}
             <div className="rounded-2xl border border-purple-500/20 bg-purple-500/5 p-6">
-              <p className="text-purple-400 font-semibold mb-4 uppercase tracking-wider text-sm">Relevant Courses & Certifications</p>
+              <p className="text-purple-400 font-semibold mb-4 uppercase tracking-wider text-sm">Core Expertise</p>
               <ul className="space-y-2">
                 {[
-                  'CCNA – Cisco Certified Network Associate',
-                  'Network Security Fundamentals',
-                  'Ethical Hacking & Penetration Testing',
-                  'Web Application Penetration Testing',
-                  'Vulnerability Assessment & Exploitation',
-                  'Linux for Cybersecurity',
-                  'Python for Security Professionals',
-                  'OWASP Top 10 & Web Security Testing',
-                  'DEPI – Penetration Testing Track',
-                ].map((cert, i) => (
+                  'Machine Learning & Deep Learning',
+                  'Natural Language Processing (NLP)',
+                  'Data Analysis & Visualization',
+                  'Artificial Intelligence Fundamentals',
+                  'Model Training & Optimization',
+                  'Python for AI/ML (NumPy, Pandas, Matplotlib)',
+                  'Frontend Web Development',
+                  'AI Ethics & Responsible AI',
+                  'Leadership & Team Management',
+                ].map((item, i) => (
                   <li key={i} className="flex items-start gap-2 text-gray-300 text-sm">
                     <span className="text-cyan-400 mt-0.5 flex-shrink-0">▸</span>
-                    {cert}
+                    {item}
                   </li>
                 ))}
               </ul>

@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Shield } from 'lucide-react';
+import { Github, Linkedin, Mail, Lightbulb } from 'lucide-react';
 import profileImage from '../../assets/profile.png';
 
 export function Hero() {
@@ -23,9 +23,9 @@ export function Hero() {
               alt="Mahmoud Elbahie"
               className="relative w-36 h-36 mx-auto rounded-full object-cover border-2 border-cyan-400/50"
             />
-            {/* Security badge */}
+            {/* AI badge */}
             <div className="absolute -bottom-2 -right-2 w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg shadow-cyan-500/30">
-              <Shield className="w-5 h-5 text-white" />
+              <Lightbulb className="w-5 h-5 text-white" />
             </div>
           </div>
 
@@ -43,10 +43,10 @@ export function Hero() {
           </h1>
 
           <p className="text-xl md:text-2xl text-cyan-300/80 mb-4 max-w-2xl mx-auto font-medium">
-            Penetration Tester & Cybersecurity Professional
+            AI Engineer & Machine Learning Developer
           </p>
           <p className="text-base text-gray-400 mb-4 max-w-xl mx-auto">
-            CCNA Certified · DEPI Penetration Testing Track · Ethical Hacker
+            DEPI Machine Learning Graduate · AI Fundamentals · Data Science Enthusiast
           </p>
 
           <p className="text-gray-500 mb-10">
